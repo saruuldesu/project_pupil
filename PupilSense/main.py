@@ -15,11 +15,8 @@ def root():
 # Allow requests from local + Vercel frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "https://project-pupil-jowrju5jh-saruul-s-projects.vercel.app/",
-    ],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
