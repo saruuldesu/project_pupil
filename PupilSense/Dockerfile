@@ -17,8 +17,7 @@ RUN python -m pip install --no-cache-dir -r requirements.txt
 
 # Install Detectron2 from source
 RUN git clone https://github.com/facebookresearch/detectron2.git /tmp/detectron2
-RUN cd /tmp/detectron2 && \
-    FORCE_CUDA=0 MAX_JOBS=1 \
+RUN cd /tmp/detectron2 && FORCE_CUDA=0 MAX_JOBS=1 \
     python -m pip install -e . --no-build-isolation --no-cache-dir
 
 # Verify Detectron2 before copying app

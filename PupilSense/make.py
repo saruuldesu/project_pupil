@@ -1,9 +1,7 @@
 
 from detectron2.config import get_cfg
 from detectron2.engine import DefaultPredictor
-from detectron2 import model_zoo
 import cv2
-import os
 import numpy as np
 
 # Load config
