@@ -1,0 +1,30 @@
+archive/
+my_venv/
+
+PupilSense
+brain-injury-detector/node_modules/
+brain-injury-detector/package-lock.json
+brain-injury-detector/.next/
+.DS_Store
+# Python
+__pycache__/
+*.pyc
+.venv/
+env/
+venv/
+python/test.ipynb
+# Conda
+conda-meta/
+
+# Node
+node_modules/
+.next/
+
+# Mac
+.DS_Store
+
+# Uploads
+uploads/
+
+# Logs
+*.log
