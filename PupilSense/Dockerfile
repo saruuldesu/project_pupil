@@ -7,22 +7,21 @@ RUN apt-get update && apt-get install -y \
     libgl1 libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
+ENV FORCE_CUDA=0
+ENV MAX_JOBS=1
+
 COPY requirements.txt .
 
 RUN python -m pip install --upgrade pip
 RUN python -m pip install "setuptools<70" wheel
 RUN python -m pip install --no-cache-dir -r requirements.txt
 
+# install detectron2 directly during Render build
+RUN python -m pip install --no-cache-dir \
+    'git+https://github.com/facebookresearch/detectron2.git'
+
 COPY . .
-
-RUN test -f detectron2/setup.py
-
-ENV FORCE_CUDA=0
-ENV MAX_JOBS=1
-
-RUN cd detectron2 && \
-    python -m pip install -e . --no-build-isolation --no-cache-dir
 
 RUN python -c "from detectron2.config import get_cfg; print('detectron2 ok')"
 
-CMD ["sh", "-c", "python -m uvicorn main:app --host 0.0.0.0 --port $PORT"]
+CMD ["sh", "-c", "python -m uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}"]
