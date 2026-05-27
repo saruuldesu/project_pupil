@@ -4,7 +4,6 @@ my_venv/
 PupilSense/dataset/
 PupilSense/data/
 PupilSense/trainData/
-PupilSense/detectron2/
 PupilSense/models_pre/
 PupilSense/models/
 PupilSense/output/
