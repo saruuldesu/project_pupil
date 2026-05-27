@@ -1,7 +1,16 @@
 archive/
 my_venv/
 
-PupilSense
+PupilSense/dataset/
+PupilSense/data/
+PupilSense/trainData/
+PupilSense/detectron2/
+PupilSense/models_pre/
+PupilSense/models/
+PupilSense/output/
+PupilSense/uploads/
+PupilSense/venv/
+PupilSense/openeds_coco.json
 brain-injury-detector/node_modules/
 brain-injury-detector/package-lock.json
 brain-injury-detector/.next/
