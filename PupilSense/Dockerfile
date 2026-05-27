@@ -19,11 +19,9 @@ RUN test -f main.py
 RUN test -f make.py
 RUN test -f models_pre/Config/config.yaml
 RUN test -f models_pre/model_final.pth
-RUN ls -la
-RUN ls -la detectron2
-RUN test -f detectron2/setup.py
+RUN git clone https://github.com/facebookresearch/detectron2.git /tmp/detectron2
 
-RUN cd detectron2 && FORCE_CUDA=0 MAX_JOBS=1 \
+RUN cd /tmp/detectron2 && FORCE_CUDA=0 MAX_JOBS=1 \
     python -m pip install -e . --no-build-isolation --no-cache-dir
 
 RUN python -c "from detectron2.config import get_cfg; print('detectron2 ok')"
