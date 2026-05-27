@@ -21,7 +21,9 @@ RUN cd /tmp/detectron2 && \
     python -m pip install -e . --no-build-isolation --no-cache-dir
 
 RUN python -c "from detectron2.config import get_cfg; print('detectron2 ok')"
-
+RUN python -c "import sys; print(sys.executable)"
+RUN python -c "import detectron2; print(detectron2.__file__)"
+RUN python -c "from detectron2.config import get_cfg; print('OK')"
 COPY . .
 
 CMD ["sh", "-c", "python -m uvicorn main:app --host 0.0.0.0 --port $PORT"]
