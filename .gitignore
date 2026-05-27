@@ -8,6 +8,7 @@ PupilSense/output/
 PupilSense/uploads/
 PupilSense/venv/
 PupilSense/openeds_coco.json
+PupilSense/detectron2/
 brain-injury-detector/node_modules/
 brain-injury-detector/package-lock.json
 brain-injury-detector/.next/
