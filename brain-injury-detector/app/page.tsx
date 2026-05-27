@@ -42,6 +42,7 @@ export default function Home() {
 
     try {
       const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+      console.log("API_URL:", API_URL);
 
       const response = await fetch(`${API_URL}/predict`, {
         method: "POST",
@@ -57,6 +58,7 @@ export default function Home() {
 
       setResult(data.result);
     } catch (error) {
+      console.error(error);
       setResult("Could not connect to backend. Make sure FastAPI is running.");
     } finally {
       setLoading(false);
