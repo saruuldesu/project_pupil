@@ -16,8 +16,11 @@ RUN python -m pip install --upgrade pip
 RUN python -m pip install "setuptools<70" wheel
 RUN python -m pip install --no-cache-dir -r requirements.txt
 
-# install detectron2 directly during Render build
 RUN python -m pip install --no-cache-dir \
+    torch==2.8.0 torchvision==0.23.0 torchaudio \
+    --index-url https://download.pytorch.org/whl/cpu
+
+RUN python -m pip install --no-cache-dir --no-build-isolation \
     'git+https://github.com/facebookresearch/detectron2.git'
 
 COPY . .
