@@ -1,7 +1,7 @@
 # PupilSense — AIを用いた脳損傷検知システム
 
 Frontend Demo:
-https://project-pupil-7k8ungglo-saruul-s-projects.vercel.app/
+https://project-pupil.vercel.app/
 
 Backend API:
 https://project-pupil.onrender.com/
@@ -20,7 +20,7 @@ https://github.com/saruuldesu/project_pupil
 ---
 
 # テスト方法
-https://project-pupil-7k8ungglo-saruul-s-projects.vercel.app/
+https://project-pupil.vercel.app/
 
 以下のサンプル画像を利用してテスト可能です。
 
@@ -117,7 +117,7 @@ PupilSenseは、瞳孔の左右差を解析することで、外傷性脳損傷�
 # Live Demo
 
 Frontend:
-https://project-pupil-7k8ungglo-saruul-s-projects.vercel.app/
+https://project-pupil.vercel.app/
 
 Backend:
 https://project-pupil.onrender.com/
